@@ -230,9 +230,8 @@ export function createCloudflareEnvironmentOptions({
 			// We need to normalize the path as it is treated as a glob and backslashes are therefore treated as escape characters.
 			entries: vite.normalizePath(workerConfig.main),
 			exclude: [...cloudflareBuiltInModules],
-			esbuildOptions: {
+			rolldownOptions: {
 				platform: "neutral",
-				target,
 				conditions: [...defaultConditions, "development"],
 				resolveExtensions: [
 					".mjs",

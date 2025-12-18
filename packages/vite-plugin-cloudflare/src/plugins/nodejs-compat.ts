@@ -175,7 +175,7 @@ export const nodeJsCompatWarningsPlugin = createPlugin(
 				if (workerConfig && !nodeJsCompat) {
 					return {
 						optimizeDeps: {
-							esbuildOptions: {
+							rolldownOptions: {
 								plugins: [
 									{
 										name: "vite-plugin-cloudflare:nodejs-compat-warnings-resolver",
